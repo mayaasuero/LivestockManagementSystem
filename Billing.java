@@ -37,6 +37,7 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
         exitBtn = new javax.swing.JButton();
         addPayment = new javax.swing.JButton();
         viewPayments = new javax.swing.JButton();
+        singleBill = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,27 +68,40 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
             }
         });
 
+        singleBill.setText("View Customer Bill");
+        singleBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                singleBillActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel2)))
+                        .addComponent(addPayment)
+                        .addGap(18, 18, 18)
+                        .addComponent(viewPayments))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(66, 66, 66)
+                            .addComponent(jLabel2))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(jLabel1))))
                 .addContainerGap(75, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(addPayment)
-                .addGap(32, 32, 32)
-                .addComponent(viewPayments)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(exitBtn)
-                .addGap(39, 39, 39))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(exitBtn)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(singleBill, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(110, 110, 110))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,12 +110,15 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitBtn)
                     .addComponent(addPayment)
                     .addComponent(viewPayments))
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(singleBill)
+                .addGap(18, 18, 18)
+                .addComponent(exitBtn)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
@@ -134,6 +151,11 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
         View window = new View();
         window.append(payments);
     }//GEN-LAST:event_viewPaymentsActionPerformed
+
+    private void singleBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleBillActionPerformed
+        ViewSingleBill singlebilling = new ViewSingleBill();
+        singlebilling.main(null);
+    }//GEN-LAST:event_singleBillActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +204,7 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JButton exitBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton singleBill;
     private javax.swing.JButton viewPayments;
     // End of variables declaration//GEN-END:variables
 }

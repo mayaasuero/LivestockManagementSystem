@@ -49,15 +49,15 @@ public class Order extends StringToDate implements DBActions{
          */
 	public boolean add(Connection conn) {
             Statement addNewOrder;
-		String newOrderDetail = "INSERT INTO orders (OrderNo, DateOrdered, CustomerID) VALUES('"+this.orderNo+"','"+this.dateOrdered+"','"+this.customerNo+"')";
-		try {
-			addNewOrder = conn.createStatement();
-			addNewOrder.executeUpdate(newOrderDetail);
-                        return true;
-		}
-		catch(Exception e) {
-                        return false;
-		}
+            String newOrderDetail = "INSERT INTO orders (OrderNo, DateOrdered, CustomerID) VALUES('"+this.orderNo+"','"+this.dateOrdered+"','"+this.customerNo+"')";
+            try {
+                    addNewOrder = conn.createStatement();
+                    addNewOrder.executeUpdate(newOrderDetail);
+                    return true;
+            }
+            catch(Exception e) {
+                    return false;
+            }
 	}
 	
 	/**

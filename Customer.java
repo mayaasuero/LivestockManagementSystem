@@ -81,4 +81,22 @@ public class Customer implements DBActions{
         }
         return rs;
     }
+    
+    /**
+     * Generate bill for customer
+     * @param conn connection to db
+     * @return ResultSet
+     */
+    public ResultSet generateBill(Connection conn){
+        ResultSet rs = null;
+        try{
+            Statement selectStatement = conn.createStatement();
+            String select = "SELECT * FROM customer JOIN orders on customer.CustomerID = orders.CustomerID JOIN order_details ON orders.orderNo = order_details.orderNo";
+            rs = selectStatement.executeQuery(select);
+        }
+        catch(Exception e) {
+            return null;
+        }
+        return rs;
+    }
 }

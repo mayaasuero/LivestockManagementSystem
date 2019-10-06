@@ -285,6 +285,43 @@ public class View extends javax.swing.JFrame {
         }
         this.setVisible(true);
     }
+    
+    /**
+     * Append view a customer's bill
+     * @param bill summary of items ordered
+     */
+    public void appendToBill(Customer bill){
+        ResultSet rs = bill.generateBill(this.conn.connect());
+        System.out.println(rs);
+        try{
+            boolean printedName = false;
+            while(rs.next()){
+                if(!printedName){
+                    String cID = "Customer ID: " + String.valueOf(rs.getObject("customer.CustomerID")+"\n");
+                    textArea.append(cID);
+                    String cName = "Customer Name: " + String.valueOf(rs.getObject("customer.CorporateName")+"\n\n");
+                    textArea.append(cName);
+                    printedName = true;
+                }
+                String orderNo = "Order number: " + String.valueOf(rs.getObject("orders.orderNo")+"\n");
+                textArea.append(orderNo);
+                String dateOrdered = "Date Ordered: " + String.valueOf(rs.getObject("orders.DateOrdered")+"\n");
+                textArea.append(dateOrdered);
+                String itemName = "ItemName: " + String.valueOf(rs.getObject("order_details.itemName")+"\n");
+                textArea.append(itemName);
+                String itemNo = "Item number: " + String.valueOf(rs.getObject("order_details.itemNo")+"\n");
+                textArea.append(itemNo);
+                String quantity = "Quantity: " + String.valueOf(rs.getObject("order_details.quantity")+"\n");
+                textArea.append(quantity);
+                textArea.append("\n");
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            textArea.append("No entries.");
+        }
+        this.setVisible(true);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;

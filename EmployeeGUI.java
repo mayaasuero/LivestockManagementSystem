@@ -33,6 +33,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         add = new javax.swing.JMenu();
         addSched = new javax.swing.JMenuItem();
+        orderedLivestock = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         viewOrders = new javax.swing.JMenuItem();
         livestock = new javax.swing.JMenuItem();
@@ -61,6 +62,14 @@ public class EmployeeGUI extends javax.swing.JFrame {
             }
         });
         add.add(addSched);
+
+        orderedLivestock.setText("Livestock assignment to orders");
+        orderedLivestock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderedLivestockActionPerformed(evt);
+            }
+        });
+        add.add(orderedLivestock);
 
         jMenuBar1.add(add);
 
@@ -161,6 +170,11 @@ public class EmployeeGUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
 
+    private void orderedLivestockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderedLivestockActionPerformed
+        AssignOrderedLivestock assign = new AssignOrderedLivestock();
+        assign.main(null);
+    }//GEN-LAST:event_orderedLivestockActionPerformed
+
     /**
      * Main method
      * @param args the command line arguments
@@ -206,6 +220,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem livestock;
+    private javax.swing.JMenuItem orderedLivestock;
     private javax.swing.JMenuItem viewOrders;
     // End of variables declaration//GEN-END:variables
 }
