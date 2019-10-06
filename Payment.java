@@ -48,7 +48,7 @@ public class Payment {
         this.billNo = billNo;
         this.paymentDate = payDate;
         this.customerID = custID;
-        this.ownerID = ownerID;
+        this.ownerID = ownID;
     }
     
     /**
