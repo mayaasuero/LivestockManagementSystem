@@ -5,7 +5,7 @@
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -42,14 +42,14 @@ public class Livestock implements DBActions{
 	
         /**
          * Constructor
-         * @param id
-         * @param type
-         * @param unitPrice
-         * @param feeds
-         * @param batchNo
-         * @param maturityDate
-         * @param scheduledHarvestDate
-         * @param harvestNo 
+         * @param id Livestock ID
+         * @param type Livestock Name
+         * @param unitPrice Unit price
+         * @param feeds Feeds
+         * @param batchNo Batch number
+         * @param maturityDate Maturity date
+         * @param scheduledHarvestDate Scheduled Harvest Date
+         * @param harvestNo Harvest number
          */
 	public Livestock(String id, String type, double unitPrice, String feeds, String batchNo, LocalDate maturityDate, LocalDate scheduledHarvestDate, String harvestNo) {
 		this.livestockID = id;
@@ -69,7 +69,7 @@ public class Livestock implements DBActions{
          */
 	public boolean add(Connection conn) {
 		Statement addNewSchedule;			
-		String newSchedule = "INSERT INTO livestock VALUES('"+this.type+"','"+this.unitPrice+"','"+this.livestockID+"','"+this.feeds+"',"+this.maturityDate+",'"+this.scheduledHarvestDate+",'"+this.batchNo+"','"+this.harvestNo+"')";
+		String newSchedule = "INSERT INTO livestock VALUES('"+this.type+"','"+this.unitPrice+"','"+this.livestockID+"','"+this.feeds+"','"+this.maturityDate+"','"+this.scheduledHarvestDate+"','"+this.batchNo+"','"+this.harvestNo+"')";
 		try {
 			addNewSchedule = conn.createStatement();
 			addNewSchedule.executeUpdate(newSchedule);
@@ -89,11 +89,12 @@ public class Livestock implements DBActions{
 	public ResultSet getTableInfo(Connection conn) {
             try {
                     Statement selectStatement = conn.createStatement();
-                    String select = "SELECT * FROM livestock JOIN schedule where livestock.BatchNo = schedule.BatchNo JOIN harvest where livestock.harvestNo = harvest.harvestNo";
+                    String select = "SELECT * FROM livestock JOIN schedule ON livestock.BatchNo = schedule.BatchNo";
                     ResultSet rs = selectStatement.executeQuery(select);
                     return rs;
             }
             catch(Exception e) {
+                e.printStackTrace();
                     return null;
             }
 	}

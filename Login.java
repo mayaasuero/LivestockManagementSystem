@@ -4,7 +4,7 @@
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -134,7 +134,7 @@ public class Login extends javax.swing.JFrame implements ActionListener{
     /**
      * Action Listener for Login Button
      * Compares username and password to connect to DB
-     * @param evt 
+     * @param evt event
      */
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         String uName = "admin";

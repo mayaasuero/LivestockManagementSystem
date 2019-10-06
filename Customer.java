@@ -4,9 +4,8 @@
  * Add and query to customer table in database
  */
 
-
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -68,7 +67,7 @@ public class Customer implements DBActions{
 
     /**
      * Retrieves ALL info in CUSTOMER table
-     * @param conn
+     * @param conn connection
      */
     public ResultSet getTableInfo(Connection conn) {
         ResultSet rs = null;

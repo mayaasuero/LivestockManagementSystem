@@ -4,7 +4,7 @@
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -123,7 +123,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
      * Action Listener for Add Schedule
      * Creates AddSchedHarLivstck object to add
      * harvest, schedule and livestock into db
-     * @param evt 
+     * @param evt event
      */
     private void addSchedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSchedActionPerformed
         AddSchedHarLivstck add = new AddSchedHarLivstck();
@@ -133,7 +133,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
     /**
      * View Orders Action Listener
      * Views orders
-     * @param evt 
+     * @param evt event
      */
     private void viewOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOrdersActionPerformed
         View newView = new View();
@@ -144,7 +144,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
     /**
      * View Livestock Action Listener
      * views livestock from table
-     * @param evt 
+     * @param evt event
      */
     private void livestockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_livestockActionPerformed
         View newView = new View();
@@ -152,6 +152,10 @@ public class EmployeeGUI extends javax.swing.JFrame {
         newView.append(viewLV);
     }//GEN-LAST:event_livestockActionPerformed
 
+    /**
+     * Exit program
+     * @param evt event
+     */
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         this.dispose();
         System.exit(0);

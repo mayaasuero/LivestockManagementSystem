@@ -4,7 +4,7 @@
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -128,7 +128,7 @@ public class AddCustomer extends javax.swing.JFrame {
     /**
      * Action Listener for add button
      * Adds the info to database
-     * @param evt 
+     * @param evt event
      */
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
     DriverConnector conn = new DriverConnector();

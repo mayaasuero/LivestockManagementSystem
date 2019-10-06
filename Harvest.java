@@ -5,7 +5,7 @@
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -31,9 +31,9 @@ public class Harvest implements DBActions{
 	
         /**
          * Constructor
-         * @param id
-         * @param date
-         * @param cust 
+         * @param id Harvest ID
+         * @param date Harvest Date
+         * @param cust Customer ID
          */
 	public Harvest(String id, LocalDate date, String cust) {
 		this.harvestNo = id;
@@ -43,7 +43,7 @@ public class Harvest implements DBActions{
         
         /**
          * Adds to harvest table
-         * @param conn
+         * @param conn connection
          * @return true if successful, false if otherwise
          */
 	public boolean add(Connection conn){
@@ -60,25 +60,10 @@ public class Harvest implements DBActions{
                         return false;
 		}
 	}
-	
-	public void delete(Connection conn, String toDelete) {
-		Statement delete;
-
-		String deleteStatement = "DELETE from harvest WHERE OwnerID ="+toDelete;
-		
-		try {
-			delete = conn.createStatement();
-			delete.executeUpdate(deleteStatement);
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
         /**
          * Retrieves all info in table
-         * @param conn
-         * @return 
+         * @param conn connection
+         * @return ResultSet
          */
 	public ResultSet getTableInfo(Connection conn) {
             try {

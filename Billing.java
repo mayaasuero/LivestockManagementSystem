@@ -1,11 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Billing
+ * Billing UI
+ * Add payments, View Payments
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -109,18 +109,26 @@ public class Billing extends javax.swing.JFrame implements ActionListener{
 
     /**
      * Exit Program
-     * @param evt 
+     * @param evt event
      */
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         this.dispose();
         System.exit(0);
     }//GEN-LAST:event_exitBtnActionPerformed
 
+    /**
+     * Adds payment to payment table in db
+     * @param evt event
+     */
     private void addPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPaymentActionPerformed
         AddPayment newPayment = new AddPayment();
         newPayment.main(null);
     }//GEN-LAST:event_addPaymentActionPerformed
 
+    /**
+     * View payment table in db
+     * @param evt event
+     */
     private void viewPaymentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPaymentsActionPerformed
         Payment payments = new Payment();
         View window = new View();

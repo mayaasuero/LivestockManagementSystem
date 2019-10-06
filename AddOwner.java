@@ -5,7 +5,7 @@
 
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -179,7 +179,7 @@ public class AddOwner extends javax.swing.JFrame implements ActionListener{
     /**
      * Action listener for ADD button
      * Adds owner to owner table
-     * @param evt 
+     * @param evt event
      */
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         Owner new_Owner = new Owner(this.fName_input.getText(), this.lName_input.getText(), this.cName_input.getText(), this.cAdd_input.getText(), this.id_input.getText());
@@ -229,8 +229,12 @@ public class AddOwner extends javax.swing.JFrame implements ActionListener{
         });
     }
     
+    /**
+     * Override - does nothing
+     * @param e event
+     */
     public void actionPerformed(ActionEvent e){
-        
+        //nothing
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -223,7 +221,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
 
     /**
      * Exits program
-     * @param evt 
+     * @param evt event
      */
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         this.dispose();
@@ -233,7 +231,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
     /**
      * Action Listener for Add Owner
      * adds new owner to DB
-     * @param evt 
+     * @param evt event
      */
     private void addOwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOwnerActionPerformed
         AddOwner newOwner = new AddOwner();
@@ -243,7 +241,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
     /**
      * Action Listener for View Owner
      * View contents of owner table
-     * @param evt 
+     * @param evt event
      */
     private void viewOwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOwnerActionPerformed
         View viewWindow = new View();
@@ -254,7 +252,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
     /**
      * View Customer Action Listener
      * views customer table in db
-     * @param evt 
+     * @param evt event
      */
     private void viewCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewCustomerActionPerformed
         View viewWindow = new View();
@@ -265,7 +263,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
     /**
      * View Orders Action Listener
      * views orders table in tb
-     * @param evt 
+     * @param evt event
      */
     private void viewOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOrdersActionPerformed
         View viewWindow = new View();
@@ -276,7 +274,7 @@ public class AdminGUI extends javax.swing.JFrame implements ActionListener{
     /**
      * View Livestock Action Listener
      * Views livestock table in DB
-     * @param evt 
+     * @param evt event
      */
     private void viewLivestockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewLivestockActionPerformed
         View viewWindow = new View();

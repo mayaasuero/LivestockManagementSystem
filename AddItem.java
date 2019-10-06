@@ -4,7 +4,7 @@
 
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -144,7 +144,7 @@ public class AddItem extends javax.swing.JFrame {
     /**
      * Action Listener for Add More button
      * Adds info to order_details table and opens another window of itself
-     * @param evt 
+     * @param evt event
      */
     private void addMoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMoreActionPerformed
         DriverConnector conn = new DriverConnector();
@@ -158,7 +158,7 @@ public class AddItem extends javax.swing.JFrame {
     /**
      * Action Listener for Done Adding button
      * Adds the info to order_details table and closes window
-     * @param evt 
+     * @param evt event
      */
     private void doneAddingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneAddingActionPerformed
         DriverConnector conn = new DriverConnector();

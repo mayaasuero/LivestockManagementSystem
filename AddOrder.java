@@ -5,7 +5,7 @@
 
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
@@ -117,7 +117,7 @@ public class AddOrder extends javax.swing.JFrame {
 
     /**
      * Adds info to orders table and closes window
-     * @param evt 
+     * @param evt event
      */
     private void addItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addItemActionPerformed
         DriverConnector conn = new DriverConnector();

@@ -1,17 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Add Payments
+ * Add payment UI
+ * Add payment to DB
  */
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+/**
+ *
+ * @author Maya Asuero
+ */
 public class AddPayment extends javax.swing.JFrame implements ActionListener {
 
     /**
@@ -151,7 +156,7 @@ public class AddPayment extends javax.swing.JFrame implements ActionListener {
 
     /**
      * Adds to payment table
-     * @param evt 
+     * @param evt event
      */
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         DriverConnector conn = new DriverConnector();
@@ -200,7 +205,7 @@ public class AddPayment extends javax.swing.JFrame implements ActionListener {
 
     /**
      * Override
-     * @param ea 
+     * @param ea action event
      */
     public void actionPerformed(ActionEvent ea){
         //nothing

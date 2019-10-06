@@ -5,12 +5,13 @@
 
 
 /**
- * @Raphael Trocino
+ * @author Raphael Trocino
  * @author Maya 
  * Date: Oct 6 2019
  * Final Project
  */
-public class AddSchedHarLivstck extends javax.swing.JFrame {
+import java.awt.event.*;
+public class AddSchedHarLivstck extends javax.swing.JFrame implements ActionListener{
 
     /**
      * Constructor
@@ -18,6 +19,7 @@ public class AddSchedHarLivstck extends javax.swing.JFrame {
     public AddSchedHarLivstck() {
         initComponents();
         this.errorM.setVisible(false);
+        addBtn.addActionListener(this);
     }
 
     /**
@@ -203,7 +205,7 @@ public class AddSchedHarLivstck extends javax.swing.JFrame {
     /**
      * Action Listener for ADD Button
      * adds info to respective tables
-     * @param evt 
+     * @param evt event
      */
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         DriverConnector conn = new DriverConnector();
@@ -261,6 +263,14 @@ public class AddSchedHarLivstck extends javax.swing.JFrame {
                 new AddSchedHarLivstck().setVisible(true);
             }
         });
+    }
+    
+    /**
+     * Override - does nothing
+     * @param e event
+     */
+    public void actionPerformed(ActionEvent e){
+        //nothing;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
